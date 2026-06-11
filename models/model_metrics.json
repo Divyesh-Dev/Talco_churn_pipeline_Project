@@ -1,0 +1,69 @@
+{
+  "best_model": "GradientBoosting",
+  "feature_importance": {
+    "tenure": 0.2129,
+    "AnnualRevenue": 0.206,
+    "LoyaltyScore": 0.1775,
+    "MonthlyCharges": 0.1585,
+    "TotalCharges": 0.1496,
+    "PaperlessBilling_encoded": 0.0431,
+    "SeniorCitizen": 0.0217,
+    "Dependents_encoded": 0.0104,
+    "gender_encoded": 0.0086,
+    "PhoneService_encoded": 0.0086,
+    "Partner_encoded": 0.0029
+  },
+  "model_results": {
+    "RandomForest": {
+      "accuracy": 0.7537,
+      "precision": 0.5244,
+      "recall": 0.7754,
+      "f1": 0.6257,
+      "roc_auc": 0.8296,
+      "confusion_matrix": [
+        [
+          772,
+          263
+        ],
+        [
+          84,
+          290
+        ]
+      ]
+    },
+    "GradientBoosting": {
+      "accuracy": 0.7928,
+      "precision": 0.6434,
+      "recall": 0.492,
+      "f1": 0.5576,
+      "roc_auc": 0.8322,
+      "confusion_matrix": [
+        [
+          933,
+          102
+        ],
+        [
+          190,
+          184
+        ]
+      ]
+    },
+    "LogisticRegression": {
+      "accuracy": 0.7317,
+      "precision": 0.4966,
+      "recall": 0.7754,
+      "f1": 0.6054,
+      "roc_auc": 0.8234,
+      "confusion_matrix": [
+        [
+          741,
+          294
+        ],
+        [
+          84,
+          290
+        ]
+      ]
+    }
+  }
+}

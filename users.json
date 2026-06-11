@@ -1,0 +1,23 @@
+{
+  "Div-dev": {
+    "password_hash": "9f298682f02022de1deb6db6eaaae87275c5a7f9637e654ca3c8b80208908daf:e36f6792de2d8c41609326cbc96560352f7cd4c770c95215806cd948d04bf988",
+    "role": "admin",
+    "full_name": "Divyesh Joshi",
+    "created_at": "2026-05-14",
+    "created_by": "system"
+  },
+  "user12": {
+    "password_hash": "ea73e182a1c271f7c0e9f71b4a7a8baad11a3d57d182a1376f27c64dcb5add66:9a9cd18c66538a9b00183e95b5d5ae208883f7ab6f39ca76b1573cef5f29db23",
+    "role": "user",
+    "full_name": "Bloody Moon",
+    "created_at": "2026-05-15",
+    "created_by": "Div-dev"
+  },
+  "myuser": {
+    "password_hash": "54725bce632c4fe66072b03d88ae9000d13151787a81bb8370c7adaec37e1e69:fb07f1d434fe7010b67b5c5b667bb95055be5dddf42400061b98b42f03ea163d",
+    "role": "user",
+    "full_name": "Bloody user",
+    "created_at": "2026-05-15",
+    "created_by": "Div-dev"
+  }
+}

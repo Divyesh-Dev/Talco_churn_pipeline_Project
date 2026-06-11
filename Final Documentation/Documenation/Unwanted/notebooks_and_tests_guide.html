@@ -1,0 +1,160 @@
+
+<h2 class="sr-only">Complete guide: where to place notebooks and test files, and how to run them</h2>
+
+<div style="padding:1rem 0">
+
+  <!-- Section 1: File Placement -->
+  <div style="margin-bottom:2rem">
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 12px;font-weight:500;text-transform:uppercase;letter-spacing:.05em">Where to place the files</p>
+
+    <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-lg);border:0.5px solid var(--color-border-tertiary);padding:14px 18px;font-family:var(--font-mono);font-size:13px;line-height:2">
+
+      <div style="color:var(--color-text-secondary)">📁 Talco_churn_pipeline project\</div>
+
+      <div style="margin-left:20px;color:var(--color-text-secondary)">📁 notebooks\</div>
+      <div style="margin-left:40px;background:var(--color-background-info);color:var(--color-text-info);border-radius:4px;padding:1px 8px;display:inline-block;margin-bottom:2px">01_data_understanding.ipynb</div><br>
+      <div style="margin-left:40px;background:var(--color-background-info);color:var(--color-text-info);border-radius:4px;padding:1px 8px;display:inline-block;margin-bottom:2px">02_data_cleaning.ipynb</div><br>
+      <div style="margin-left:40px;background:var(--color-background-info);color:var(--color-text-info);border-radius:4px;padding:1px 8px;display:inline-block;margin-bottom:2px">03_feature_engineering.ipynb</div><br>
+      <div style="margin-left:40px;background:var(--color-background-info);color:var(--color-text-info);border-radius:4px;padding:1px 8px;display:inline-block;margin-bottom:4px">04_visualization.ipynb</div>
+
+      <div style="margin-left:20px;color:var(--color-text-secondary)">📁 tests\</div>
+      <div style="margin-left:40px;background:var(--color-background-success);color:var(--color-text-success);border-radius:4px;padding:1px 8px;display:inline-block;margin-bottom:2px">__init__.py</div><br>
+      <div style="margin-left:40px;background:var(--color-background-success);color:var(--color-text-success);border-radius:4px;padding:1px 8px;display:inline-block;margin-bottom:2px">conftest.py</div><br>
+      <div style="margin-left:40px;background:var(--color-background-success);color:var(--color-text-success);border-radius:4px;padding:1px 8px;display:inline-block;margin-bottom:4px">test_etl.py</div>
+
+      <div style="margin-left:20px;color:var(--color-text-secondary)">main.py &nbsp; app.py &nbsp; requirements.txt ...</div>
+    </div>
+  </div>
+
+  <!-- Section 2: Install -->
+  <div style="margin-bottom:2rem">
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 12px;font-weight:500;text-transform:uppercase;letter-spacing:.05em">Step 1 — Install dependencies</p>
+    <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:12px 16px;font-family:var(--font-mono);font-size:13px;color:var(--color-text-primary)">
+      pip install pytest pytest-cov jupyter
+    </div>
+  </div>
+
+  <!-- Section 3: Run notebooks -->
+  <div style="margin-bottom:2rem">
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 12px;font-weight:500;text-transform:uppercase;letter-spacing:.05em">Step 2 — Run notebooks</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:12px 14px">
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 6px">Open all 4 notebooks in browser</p>
+        <code style="font-size:12px;color:var(--color-text-primary)">jupyter notebook notebooks/</code>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:12px 14px">
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 6px">Open a specific notebook</p>
+        <code style="font-size:12px;color:var(--color-text-primary)">jupyter notebook notebooks/01_data_understanding.ipynb</code>
+      </div>
+    </div>
+    <div style="margin-top:10px;background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:12px 14px">
+      <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 6px">Once open — run all cells in order</p>
+      <code style="font-size:12px;color:var(--color-text-primary)">Menu → Cell → Run All</code>
+      <span style="font-size:12px;color:var(--color-text-secondary);margin-left:12px">or press</span>
+      <code style="font-size:12px;color:var(--color-text-primary);margin-left:6px">Shift + Enter</code>
+      <span style="font-size:12px;color:var(--color-text-secondary);margin-left:4px">cell by cell</span>
+    </div>
+  </div>
+
+  <!-- Section 4: Run tests -->
+  <div style="margin-bottom:2rem">
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 12px;font-weight:500;text-transform:uppercase;letter-spacing:.05em">Step 3 — Run unit tests</p>
+    <div style="display:grid;grid-template-columns:1fr;gap:8px">
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:12px 14px">
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px">Run all 35 tests with details</p>
+        <code style="font-size:12px;color:var(--color-text-primary)">python -m pytest tests/ -v</code>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:12px 14px">
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px">Run with coverage report (shows % of code tested)</p>
+        <code style="font-size:12px;color:var(--color-text-primary)">python -m pytest tests/ -v --tb=short --cov=src</code>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:12px 14px">
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0 0 4px">Run only one test class (e.g. cleaning tests)</p>
+        <code style="font-size:12px;color:var(--color-text-primary)">python -m pytest tests/ -v -k "TestCleaning"</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 5: What each notebook does -->
+  <div style="margin-bottom:2rem">
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 12px;font-weight:500;text-transform:uppercase;letter-spacing:.05em">What each notebook does</p>
+    <div style="display:grid;gap:8px">
+      <div style="display:grid;grid-template-columns:180px 1fr;gap:12px;align-items:start;background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:12px 14px">
+        <code style="font-size:12px;color:var(--color-text-info)">01_data_understanding</code>
+        <span style="font-size:13px;color:var(--color-text-primary)">Load raw CSV, check shape, data types, missing values, churn distribution charts, correlation matrix. Run this first.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:180px 1fr;gap:12px;align-items:start;background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:12px 14px">
+        <code style="font-size:12px;color:var(--color-text-info)">02_data_cleaning</code>
+        <span style="font-size:13px;color:var(--color-text-primary)">Fix TotalCharges, impute with median, remove duplicates, strip whitespace. Shows before vs after comparison table.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:180px 1fr;gap:12px;align-items:start;background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:12px 14px">
+        <code style="font-size:12px;color:var(--color-text-info)">03_feature_engineering</code>
+        <span style="font-size:13px;color:var(--color-text-primary)">Binary encode columns, one-hot encode categories, create tenure_group, RevenueCategory, AnnualRevenue, LoyaltyScore. Charts for each feature vs churn.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:180px 1fr;gap:12px;align-items:start;background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:12px 14px">
+        <code style="font-size:12px;color:var(--color-text-info)">04_visualization</code>
+        <span style="font-size:13px;color:var(--color-text-primary)">All business charts — revenue at risk, churn across every feature, ML model performance, offer distribution, final KPI summary. Needs pipeline run first.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 6: What each test class covers -->
+  <div style="margin-bottom:2rem">
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 12px;font-weight:500;text-transform:uppercase;letter-spacing:.05em">What each test class covers (9 classes, 35 tests)</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:10px 12px">
+        <p style="font-size:12px;font-weight:500;margin:0 0 4px;color:var(--color-text-success)">TestExtract (5 tests)</p>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0">Column presence, uniqueness, correct shape</p>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:10px 12px">
+        <p style="font-size:12px;font-weight:500;margin:0 0 4px;color:var(--color-text-success)">TestCleaning (6 tests)</p>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0">TotalCharges fix, null imputation, duplicates, whitespace</p>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:10px 12px">
+        <p style="font-size:12px;font-weight:500;margin:0 0 4px;color:var(--color-text-success)">TestTransform (10 tests)</p>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0">Churn encoding, OHE, Contract/Internet/Payment preserved</p>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:10px 12px">
+        <p style="font-size:12px;font-weight:500;margin:0 0 4px;color:var(--color-text-success)">TestFeatureEngineering (7 tests)</p>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0">New columns, AnnualRevenue = 12x monthly, LoyaltyScore in [0,1]</p>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:10px 12px">
+        <p style="font-size:12px;font-weight:500;margin:0 0 4px;color:var(--color-text-success)">TestValidation (3 tests)</p>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0">Passes on clean data, fails on nulls and bad dtype</p>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:10px 12px">
+        <p style="font-size:12px;font-weight:500;margin:0 0 4px;color:var(--color-text-warning)">TestPredict (3 tests) — needs model</p>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0">Probability in [0,1], risk label valid, output is dict. Auto-skips if model not trained yet.</p>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:10px 12px">
+        <p style="font-size:12px;font-weight:500;margin:0 0 4px;color:var(--color-text-success)">TestRecommend (7 tests)</p>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0">Correct offer per customer type, all required fields present</p>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:10px 12px">
+        <p style="font-size:12px;font-weight:500;margin:0 0 4px;color:var(--color-text-success)">TestAuth (4 tests)</p>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0">Password hash/verify, users.json exists, admin user, add/delete user</p>
+      </div>
+      <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:10px 12px">
+        <p style="font-size:12px;font-weight:500;margin:0 0 4px;color:var(--color-text-success)">TestConfig (3 tests)</p>
+        <p style="font-size:12px;color:var(--color-text-secondary);margin:0">All imports work, paths are strings, tenure bins sorted</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 7: Expected output -->
+  <div>
+    <p style="font-size:13px;color:var(--color-text-secondary);margin:0 0 12px;font-weight:500;text-transform:uppercase;letter-spacing:.05em">Expected test output when everything passes</p>
+    <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-tertiary);padding:12px 16px;font-family:var(--font-mono);font-size:12px;line-height:1.8;color:var(--color-text-secondary)">
+      <span style="color:var(--color-text-success)">PASSED</span> tests/test_etl.py::TestExtract::test_validate_columns_pass<br>
+      <span style="color:var(--color-text-success)">PASSED</span> tests/test_etl.py::TestCleaning::test_total_charges_numeric<br>
+      <span style="color:var(--color-text-success)">PASSED</span> tests/test_etl.py::TestTransform::test_churn_binary_encoded<br>
+      <span style="color:var(--color-text-secondary)">SKIPPED</span> tests/test_etl.py::TestPredict::test_predict_single_returns_dict<br>
+      <span style="color:var(--color-text-success)">PASSED</span> tests/test_etl.py::TestRecommend::test_high_risk_month_to_month_gets_contract_offer<br>
+      <span style="color:var(--color-text-success)">PASSED</span> tests/test_etl.py::TestAuth::test_hash_and_verify_password<br>
+      <div style="margin-top:8px;border-top:0.5px solid var(--color-border-tertiary);padding-top:8px">
+        <span style="color:var(--color-text-success);font-weight:500">32 passed</span>, <span style="color:var(--color-text-warning)">3 skipped</span> — skipped = ML tests waiting for model (run pipeline first)
+      </div>
+    </div>
+  </div>
+
+</div>
