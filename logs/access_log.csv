@@ -348,3 +348,7 @@ timestamp,username,role,event,detail,ip
 2026-06-12 04:11:25,Div-dev,admin,PAGE_VIEW,At-Risk Customers,localhost
 2026-06-12 04:11:26,Div-dev,admin,PAGE_VIEW,Model Performance,localhost
 2026-06-12 04:11:54,Div-dev,admin,PAGE_VIEW,Executive Dashboard,localhost
+2026-06-12 04:42:21,Div-dev,admin,LOGIN_SUCCESS,,localhost
+2026-06-12 04:42:21,Div-dev,admin,PAGE_VIEW,Executive Dashboard,localhost
+2026-06-12 04:51:56,Div-dev,admin,LOGIN_SUCCESS,,localhost
+2026-06-12 04:51:56,Div-dev,admin,PAGE_VIEW,Executive Dashboard,localhost

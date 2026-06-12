@@ -7,7 +7,10 @@ import json
 import hashlib
 import csv
 import streamlit as st
+from zoneinfo import ZoneInfo
 from datetime import datetime
+
+
 from typing import Optional
 
 # ── Paths ─────────────────────────────────────────────────────
@@ -148,7 +151,9 @@ def log_event(username: str, role: str, event: str, detail: str = ""):
     _ensure_log()
     with open(LOG_FILE, "a", newline="", encoding="utf-8") as f:
         csv.writer(f).writerow([
-            datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            datetime.now(
+                ZoneInfo("Asia/Kolkata")
+            ).strftime("%Y-%m-%d %H:%M:%S"),
             username, role, event, detail_clean, "localhost"
         ])
 

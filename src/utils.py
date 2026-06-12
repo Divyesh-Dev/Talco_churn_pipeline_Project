@@ -3,11 +3,11 @@
 # ============================================================
 
 import datetime
-
+from zoneinfo import ZoneInfo
 
 def log(stage: str, message: str):
     """Pretty-print a timestamped ETL log message."""
-    ts = datetime.datetime.now().strftime("%H:%M:%S")
+    ts = datetime.datetime.now(ZoneInfo("Asia/Kolkata")).strftime("%Y-%m-%d %H:%M:%S")
     print(f"[{ts}] [{stage:^10}] {message}")
 
 
